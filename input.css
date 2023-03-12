@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 0.9rem;
+}
+
+.lines {
+  height: 1.5px;
+  min-width: 100%;
+  margin-top: 30px;
+
+  @apply bg-darkGrayishBlue md:min-w-[95%];
+}
+
+.lines2 {
+  height: 1px;
+  min-width: 100%;
+  margin-top: 10px;
+  opacity: 8%;
+
+  @apply bg-darkGrayishBlue;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 45px;
+  height: 3.5px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+  padding-right: 20px;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.nav-menu {
+  @apply animate-rightToLeft;
+}
